@@ -1,0 +1,32 @@
+
+GET http://localhost:3000/api/patients
+
+###
+POST http://localhost:3000/api/patients
+content-type: application/json
+
+{
+
+        "name": "Johna McClane",
+        "dateOfBirth": "1986-07-09",
+        "ssn": "090786-122X",
+        "gender": "male",
+        "occupation": "New york city cop"
+}
+
+###
+GET http://localhost:3000/api/patients/d2773336-f723-11e9-8f0b-362b9e155667
+
+###
+POST http://localhost:3000/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries
+content-type: application/json
+
+{
+        "description": "Patient mistakenly found himself in a nuclear plant waste site without protection gear.",
+        "type": "Hospital",
+        "date": "2021-07-09",
+        "specialist": "Avectis",
+        "diagnosisCodes": "['Z57.1', 'Z74.3', 'M51.2']",
+        "dischargeDate": "2015-01-16",
+        "criteria": "Thumb has healed."
+}
